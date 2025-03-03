@@ -245,7 +245,8 @@ public class Adicionar extends javax.swing.JFrame {
                 dao.insertCustomer(c);
             } catch (SQLException ex) {
                 Logger.getLogger(Adicionar.class.getName()).log(Level.SEVERE, null, ex);
-            } finally {
+            }
+                finally {
                 JOptionPane.showMessageDialog(rootPane, "Usuário inserido");
             }
         }

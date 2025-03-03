@@ -257,6 +257,8 @@ public class Mainui extends javax.swing.JFrame {
             String n = (String) jTable1.getValueAt(x, 2);
             dao.deleteCustomer(v, n);
             updatelist();
+        } catch (ArrayIndexOutOfBoundsException a){
+            JOptionPane.showMessageDialog(rootPane, "Selecione uma linha!");
         } catch (SQLException ex) {
             Logger.getLogger(Mainui.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -265,7 +267,7 @@ public class Mainui extends javax.swing.JFrame {
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
         if (jComboBox1.getSelectedIndex() == 0) {
-            jPanel1.setBackground(new Color(242, 242, 242));
+            jPanel1.setBackground(new Color(214, 217, 223));
         }
         if (jComboBox1.getSelectedIndex() == 1) {
             jPanel1.setBackground(Color.red);
